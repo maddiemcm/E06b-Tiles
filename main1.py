@@ -9,20 +9,20 @@ SCREEN_HEIGHT = 600
 SCREEN_TITLE = "Tiled Map Editor Test"
 
 # Constants used to scale our sprites from their original size
-CHARACTER_SCALING = 0.5
-TILE_SCALING = 0.5
+CHARACTER_SCALING = 0.4
+TILE_SCALING = 0.75
 SPRITE_PIXEL_SIZE = 64
 GRID_PIXEL_SIZE = (SPRITE_PIXEL_SIZE * TILE_SCALING)
 
 # Movement speed of player, in pixels per frame
-PLAYER_MOVEMENT_SPEED = 2
+PLAYER_MOVEMENT_SPEED = 4
 GRAVITY = 1
 PLAYER_JUMP_SPEED = 15
 
 # How many pixels to keep as a minimum margin between the character
 # and the edge of the screen.
-LEFT_VIEWPORT_MARGIN = 150
-RIGHT_VIEWPORT_MARGIN = 150
+LEFT_VIEWPORT_MARGIN = 100
+RIGHT_VIEWPORT_MARGIN = 100
 BOTTOM_VIEWPORT_MARGIN = 100
 TOP_VIEWPORT_MARGIN = 100
 
@@ -75,7 +75,7 @@ class MyGame(arcade.Window):
 
         # Set up the player, specifically placing it at these coordinates.
         self.player_sprite = arcade.Sprite("assets/player.png", CHARACTER_SCALING)
-        self.player_sprite.center_y = 96
+        self.player_sprite.center_y = 64
         self.player_sprite.center_x = 64
         self.player_list.append(self.player_sprite)
 
